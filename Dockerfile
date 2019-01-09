@@ -1,4 +1,6 @@
-FROM microsoft/aspnetcore-build:2.0 
+FROM node:10 AS build-env
+
+FROM microsoft/aspnetcore-build:2.0
 WORKDIR /app
 
 # Copy csproj and restore as distinct layers
